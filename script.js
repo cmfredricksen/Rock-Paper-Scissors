@@ -6,17 +6,17 @@ const yourScoreSpan = document.querySelector('[data-your-score]');
 const SELECTIONS = [
 {
 name: 'rock',
-emoji: '',
+emoji: '&#x270A;',
 beats: 'scissors',
 },
 {
 name: 'paper',
-emoji: '',
+emoji: '&#x1F91A;',
 beats: 'rock',
 },
 {
 name: 'scissors',
-emoji: '';
+emoji: '&#x270C;',
 beats: 'paper',
 }
 ];
@@ -58,6 +58,6 @@ return selection.beats === opponentSelection.name
 
 function randomSelection() {
 const randomIndex = Math.floor(Math.random() * SELECTIONS.length[randomIndex]
-}
+)}
 
 
