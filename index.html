@@ -4,28 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="selections">
-        <button class="selection" data-selection="rock"><p>&#x270A;</p></button>
-        <button class="selection" data-selection="paper"><p>&#x1F91A;</p></button>
-        <button class="selection" data-selection="scissors"><p>&#x270C;</p></button>
+  <header>
+      <h1>Rock Paper Scissors</h1>
+  </header>
+
+  <p id='action-message'>make your move!</p>
+
+  <div class="choices">
+    <div class="choice" id='r'>
+        <p>💎</p>   
     </div>
-    <div class="results">
-        <div>
-            You
-            <span class='result-score' data-your-score>0</span>
-        </div>
-        <div data-final-column>
-            Computer
-            <span class='result-score' data-computer-score>0</span>
-        </div>
+    <div class="choice" id='p'>
+        <p>🧾</p>
     </div>
-<div>
-<div class="result-selection winner"><p>&#x270A</p></div>
-<div class="result-selection"><p>&#x270C</p></div>
-</div> 
+    <div class="choice" id='s'>
+        <p>✂️</p>
+    </div>
+  </div>
+
+  <div class="result">
+      <p>Rock beats scissors, you win.</p>
+  </div>
+
+  <div class="score-board">
+    <div class="badge" id="user-label">user</div>
+    <span id='user-score'>0</span>|<span id='computer-score'>0</span>
+    <div class="badge" id="computer-label">computer</div>
+
+  </div>
+
+
+
+ 
+  <script src="script.js"></script>
+
+
+
 </body>
 </html>
