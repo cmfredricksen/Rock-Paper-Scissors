@@ -15,7 +15,6 @@ function getComputerChoice() {
     return choices[randomNum];
 }
 
-// console.log(getComputerChoice());
 function convertToWord(letter) {
     if (letter === 'r') return 'Rock';
     if (letter === 'p') return 'Paper';
@@ -25,29 +24,22 @@ function convertToWord(letter) {
 function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
-    result_div.innerHTML = `You win! ${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}`;
-
-   
+    result_div.innerHTML = `You win! ${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}`;  
 }
 
 function lose(userChoice, computerChoice) {
     compScore++;
     compScore_span.innerHTML = compScore;
     result_div.innerHTML = `You lose! ${convertToWord(computerChoice)}
-    beats ${convertToWord(userChoice)}`;
-    
-    
+    beats ${convertToWord(userChoice)}`;  
 }
 
 function tie(userChoice) {
-    result_div.innerHTML = `It's a tie! Both chose ${convertToWord(userChoice)}`
-   
-   
+    result_div.innerHTML = `It's a tie! Both chose ${convertToWord(userChoice)}`  
 }
 
 function game(userChoice) {
     const computerChoice = getComputerChoice();
-
     switch (userChoice + computerChoice) {
         case 'rs':
         case 'pr':
@@ -67,15 +59,11 @@ function game(userChoice) {
     }
 }
 
-
-
 game('c');
 
 function main() {
     rock_div.addEventListener('click', () => game('r'));
-    
     paper_div.addEventListener('click', () => game('p'));
-    
     scissors_div.addEventListener('click', () => game('s'));
 }
 
